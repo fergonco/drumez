@@ -148,7 +148,7 @@ a.pure-button-primary {
 .splash-container {
     background-image:url('../../img/splash.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: bottom center;
     background-color: black;
     z-index: 1;
     overflow: hidden;
