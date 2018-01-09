@@ -102,6 +102,7 @@ a.pure-button-primary {
 
 #langlinks li {
     padding:0 0.5em;
+    cursor: pointer;
 }
 .home-menu {
     height: 50px;

@@ -28,12 +28,13 @@
 
 <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="#contact">Contact</a>
+        <a id="i18n.contact" class="pure-menu-heading" href="#" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });return false;">Contact</a>
         <ul id="langlinks" class="pure-menu-list">
-            <li class="pure-menu-item">Français</li>
-            <li class="pure-menu-item pure-menu-selected">English</li>
-            <li class="pure-menu-item">Español</li>
-            <li class="pure-menu-item">Deutsch</li>
+            <!-- classes overriden in setlang js function!! -->
+            <li id="fr" class="pure-menu-item" onclick="setlang('fr')">Français</li>
+            <li id="en" class="pure-menu-item" onclick="setlang('en')">English</li>
+            <li id="es" class="pure-menu-item" onclick="setlang('es')">Español</li>
+            <li id="de" class="pure-menu-item" onclick="setlang('de')">Deutsch</li>
         </ul>
     </div>
 </div>
@@ -42,12 +43,11 @@
 <div class="splash-container">
     <div class="splash">
         <h1 class="splash-head">DRUMEZ</h1>
-        <p class="splash-subhead">
-            Learn drums in Pays de Gex 
+        <p id="i18n.subtitle" class="splash-subhead">
+            
         </p>
         <p>
-            <a href="#" class="pure-button pure-button-primary" onclick="document.querySelector('#content').scrollIntoView({ behavior: 'smooth' });return false;">More</a>
-            <a href="#" class="pure-button pure-button-primary" onclick="document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });return false;">Contact</a>
+            <a id="i18n.more" href="#" class="pure-button pure-button-primary" onclick="document.querySelector('#content').scrollIntoView({ behavior: 'smooth' });return false;"></a>
         </p>
     </div>
 </div>
@@ -59,68 +59,70 @@
 
                 <h3 class="content-subhead">
                     <img class="svgicon" src="img/uniquemethod.svg"></img>
-                    Unique method
+                    <span id="i18n.unique"></span>
                 </h3>
-                <p>
-                    I will guide you on the way to gain independence, synchronization, technique and expressivity.
+                <p id="i18n.uniqueDesc">
+                   
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <img class="svgicon" src="img/allages.svg"></img>
-                    All ages
+                    <span id="i18n.allages"></span>
                 </h3>
-                <p>
-                    From 6 years old you are able to join my courses. I enjoy working with kids and making learning drums something fun and interesting for them.
+                <p id="i18n.allagesDesc">
+                    
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <img class="svgicon" src="img/adapted.svg"></img>
-                    Adapted to your needs
+                    <span id="i18n.adapted"></span>
                 </h3>
-                <p>
-                    Whether you are starting or already can do some drumming, I can guide you bla bla bla.
-                    At home or in studio
+                <p id="i18n.adaptedDesc">
+                    
                 </p>
             </div>
             <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                 <h3 class="content-subhead">
                     <img class="svgicon" src="img/allstyles.svg"></img>
-                    All styles
+                    <span id="i18n.allstyles"></span>
                 </h3>
-                <p>
-                    I can introduce you to a wide variety of styles: jazz, blues, latin, rock, etc.
+                <p id="i18n.allstylesDesc">
+                    
                 </p>
             </div>
         </div>
     </div>
 
     <div id="where" class="ribbon l-box-lrg pure-g">
-        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-            <a href="img/map.jpg" target="_blank"><img alt="File Icons" class="pure-img-responsive" src="img/map.jpg"></a>
-        </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
 
-            <h2 class="content-head content-head-ribbon">In Pays de Gex and part of Geneva.</h2>
+            <h2 id="i18n.where" class="content-head content-head-ribbon"></h2>
 
-            <p>
-                Fridays at the <a href="http://sgm01.com/" target="_blank">Saint-Genis Music</a> and the rest of the days at your home. I can travel to these communes to give a drum lesson (click the image to enlarge).
+            <p id="i18n.whereDesc">
             </p>
+        </div>
+        <div class="l-box-lrg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+            <a href="img/map.jpg" target="_blank"><img alt="File Icons" class="pure-img-responsive" src="img/map.jpg"></a>
         </div>
     </div>
 
     <div id="contact" class="content">
-        <h2 class="content-head is-center">Contact me</h2>
+        <h2 id="i18n.contactme" class="content-head is-center"></h2>
 
         <div class="pure-g">
             <div class="l-box-lrg pure-u-1 pure-u-md-1-5">
             </div>
 
             <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
-                <h4>Contact Me</h4>
                 <p>
-                    Questions? Just call me at +33 (0) 6 52 55 79 67. You can contact me per Whatsapp on the +49 157 50 95 35 46 or per email at fernando@drumez.com.
+                    <span id="i18n.join"></span>
+                    <ul>
+                    <li id="i18n.callme"></li>
+                    <li id="i18n.whatsapp"></li>
+                    <li id="i18n.email"></li>
+                    </ul>
                 </p>
             </div>
 
@@ -131,9 +133,113 @@
 
     </div>
 
+    <div class="content">
+        Icons designed by Freepik from Flaticon.
+    </div>
 </div>
 
 
+<script>
+let i18n = {
+    en: {
+        contact      :"Contact",
+        subtitle     :"Drums made simple in Pays de Gex",
+        more         :"More",
+        unique       :"Unique method",
+        uniqueDesc   :"I will show you that drumming is not difficult. With me you will gain independence, synchronization, technique, ... but always keeping in mind that we are musicians! All lessons involve playing some music.",
+        allages      :"All ages",
+        allagesDesc  :"I accept kids starting from 6 years old. I enjoy working with them and making something fun and interesting out of learning drums.",
+        adapted      :"Adapted to your needs",
+        adaptedDesc  :"I speak French, English, German, Spanish and Catalan!<br/>All levels.<br/>I give lessons Friday at Saint-Genis Music. I am available any other day for home lessons.",
+        allstyles    :"All styles",
+        allstylesDesc:"I can introduce you to several styles: jazz, blues, latin, rock, progressive, etc.",
+        where        :"In Pays de Gex and part of Geneva.",
+        whereDesc    :"Fridays at the <a href='http://sgm01.com/' target='_blank'>Saint-Genis Music</a> and the rest of the days at your home. I can travel to these communes to give a drum lesson (click the image to enlarge).",
+        contactme    :"Contact me",
+        join         :"Do you want to join my courses? Just contact me:",
+        callme       :"call me at +33 (0) 6 52 55 79 67",
+        whatsapp     :"send me a Whatsapp on the +49 157 50 95 35 46",
+        email        :"send me an email at fernando@drumez.com."
+    },
+    fr: {
+        contact      :"Contact",
+        subtitle     :"Drums made simple in Pays de Gex",
+        more         :"More",
+        unique       :"Unique method",
+        uniqueDesc   :"I will show you that drumming is not difficult. With me you will gain independence, synchronization, technique, ... but always keeping in mind that we are musicians! All lessons involve playing some music.",
+        allages      :"All ages",
+        allagesDesc  :"I accept kids starting from 6 years old. I enjoy working with them and making something fun and interesting out of learning drums.",
+        adapted      :"Adapted to your needs",
+        adaptedDesc  :"I speak French, English, German, Spanish and Catalan!<br/>All levels.<br/>I give lessons Friday at Saint-Genis Music. I am available any other day for home lessons.",
+        allstyles    :"All styles",
+        allstylesDesc:"I can introduce you to several styles: jazz, blues, latin, rock, progressive, etc.",
+        where        :"In Pays de Gex and part of Geneva.",
+        whereDesc    :"Fridays at the <a href='http://sgm01.com/' target='_blank'>Saint-Genis Music</a> and the rest of the days at your home. I can travel to these communes to give a drum lesson (click the image to enlarge).",
+        contactme    :"Contact me",
+        join         :"Do you want to join my courses? Just contact me:",
+        callme       :"call me at +33 (0) 6 52 55 79 67",
+        whatsapp     :"send me a Whatsapp on the +49 157 50 95 35 46",
+        email        :"send me an email at fernando@drumez.com."
+    },
+    es: {
+        contact      :"Contactar",
+        subtitle     :"Tocar la batería es sencillo en Pays de Gex",
+        more         :"Más",
+        unique       :"Método único",
+        uniqueDesc   :"I will show you that drumming is not difficult. With me you will gain independence, synchronization, technique, ... but always keeping in mind that we are musicians! All lessons involve playing some music.",
+        uniqueDesc   :"Te enseñaré que tocar la batería no es complicado. Conmigo ganarás independencia, coordination, técnica, etc. ¡pero siempre teniendo en cuenta que somos músicos! Todas las clases incluyen tocar música.",
+        allages      :"Todas las edades",
+        allagesDesc  :"Acepto niños a partir de seis años. Me gusta trabajar con ellos y hacer de aprender a tocar la batería algo divertido e interesante.",
+        adapted      :"Adaptado a tus necesidades",
+        adaptedDesc  :"Hablo francés, inglés, alemán, español y catalán!<br/>Todos los niveles.<br/>Doy clases los viernes en Saint-Genis Music. El resto de la semana estod disponible a domicilio.",
+        allstyles    :"Todos los estillos",
+        allstylesDesc:"Te puedo introducir a distintos estilos: jazz, blues, latin, rock, progresivo, etc.",
+        where        :"En Pays de Gex y parte de Ginebra.",
+        whereDesc    :"Los viernes en <a href='http://sgm01.com/' target='_blank'>Saint-Genis Music</a> y el resto de la semana a domicilio. Puedo viajar a los municipios indicados en el mapa (haz click para ver la foto más grande).",
+        contactme    :"Contacta conmigo",
+        join         :"¿Quieres aprender batería? Contáctame:",
+        callme       :"llámame al +33 (0) 6 52 55 79 67",
+        whatsapp     :"mándame un Whatsapp al +49 157 50 95 35 46",
+        email        :"mándame un email a fernando@drumez.com."
+    },
+    de: {
+        contact      :"Contact",
+        subtitle     :"Drums made simple in Pays de Gex",
+        more         :"More",
+        unique       :"Unique method",
+        uniqueDesc   :"I will show you that drumming is not difficult. With me you will gain independence, synchronization, technique, ... but always keeping in mind that we are musicians! All lessons involve playing some music.",
+        allages      :"All ages",
+        allagesDesc  :"I accept kids starting from 6 years old. I enjoy working with them and making something fun and interesting out of learning drums.",
+        adapted      :"Adapted to your needs",
+        adaptedDesc  :"I speak French, English, German, Spanish and Catalan!<br/>All levels.<br/>I give lessons Friday at Saint-Genis Music. I am available any other day for home lessons.",
+        allstyles    :"All styles",
+        allstylesDesc:"I can introduce you to several styles: jazz, blues, latin, rock, progressive, etc.",
+        where        :"In Pays de Gex and part of Geneva.",
+        whereDesc    :"Fridays at the <a href='http://sgm01.com/' target='_blank'>Saint-Genis Music</a> and the rest of the days at your home. I can travel to these communes to give a drum lesson (click the image to enlarge).",
+        contactme    :"Contact me",
+        join         :"Do you want to join my courses? Just contact me:",
+        callme       :"call me at +33 (0) 6 52 55 79 67",
+        whatsapp     :"send me a Whatsapp on the +49 157 50 95 35 46",
+        email        :"send me an email at fernando@drumez.com."
+    }
+}
+
+let lastLang = null;
+
+function setlang(lang) {
+    let strings = i18n[lang];
+    for (key in strings) {
+        document.getElementById("i18n." + key).innerHTML = strings[key];
+    }
+    if (lastLang != null){ 
+        document.getElementById(lastLang).className="pure-menu-item";
+    }
+    document.getElementById(lang).className="pure-menu-item pure-menu-selected";
+    lastLang = lang;
+}
+setlang("en");
+
+</script>
 
 
 </body>
