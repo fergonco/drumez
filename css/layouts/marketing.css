@@ -245,6 +245,14 @@ a.pure-button-primary {
     border: 1px solid gray;
 }
 
+.video-container {
+    text-align: center;
+}
+
+.video-container iframe {
+    max-width: 100%;
+}
+
 .profile-image-container {
     text-align: center;
     margin-top: 0px;
