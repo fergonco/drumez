@@ -252,6 +252,10 @@ a.pure-button-primary {
     border: 1px solid gray;
 }
 
+#where>div {
+    padding: 1em;
+}
+
 .video-container {
     text-align: center;
 }
