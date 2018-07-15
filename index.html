@@ -106,9 +106,19 @@
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
             <h2 id="i18n.concert" class="content-head content-head-ribbon"></h2>
 
-            <video class="pure-img-responsive" controls>
-                <source src="img/concert1718/summary.webm" type="video/webm">
-            </video>
+            <!-- Load Facebook SDK for JavaScript -->
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+                fjs.parentNode.insertBefore(js, fjs);
+              }(document, 'script', 'facebook-jssdk'));</script>
+
+              <!-- Your embedded video player code -->
+            <div class="fb-video" data-href="https://www.facebook.com/drumez01/videos/484111042027953/" data-width="600" data-show-text="false"><blockquote cite="https://www.facebook.com/drumez01/videos/484111042027953/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/drumez01/videos/484111042027953/">Concert fin d&#039;année 2017/2018</a><p>Concert 2017/2018</p>Publiée par <a href="https://www.facebook.com/drumez01/">Drumez - Bien plus que des leçons de batterie</a> sur Samedi 14 juillet 2018</blockquote></div>
+
             <img class="pure-img-responsive" src="img/concert1718/sticks.jpg">
         </div>
         <div class="l-box-lg is-center pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
