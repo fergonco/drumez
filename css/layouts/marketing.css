@@ -14,6 +14,10 @@ body {
     font-size: 13px;
 }
 
+.ribbon a, .ribbon a:visited {
+    color: white;
+}
+
 h1,
 h2,
 h3,
@@ -250,6 +254,10 @@ a.pure-button-primary {
 #where img {
     max-height: 80vh;
     border: 1px solid gray;
+}
+
+#where p {
+    text-align: left;
 }
 
 #where>div {
